@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio Reifansa</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ICON -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:20px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      background:rgba(15,23,42,0.8);
+      backdrop-filter:blur(10px);
+    }
+
+    nav h2{
+      color:#38bdf8;
+      font-size:28px;
+    }
+
+    nav ul{
+      display:flex;
+      gap:25px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#38bdf8;
+    }
+
+    /* HOME */
+
+    .home{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:120px 10%;
+      flex-wrap:wrap;
+      gap:40px;
+    }
+
+    .home-text{
+      max-width:550px;
+    }
+
+    .home-text h1{
+      font-size:55px;
+      margin-bottom:10px;
+    }
+
+    .home-text h1 span{
+      color:#38bdf8;
+    }
+
+    .home-text h3{
+      font-size:28px;
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .home-text p{
+      line-height:1.8;
+      color:#94a3b8;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 28px;
+      background:#38bdf8;
+      color:white;
+      text-decoration:none;
+      border-radius:12px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#0ea5e9;
+      transform:scale(1.05);
+    }
+
+    .home-img img{
+      width:320px;
+      border-radius:20px;
+      box-shadow:0 0 25px rgba(56,189,248,0.4);
+    }
+
+    /* SECTION */
+
+    section{
+      padding:100px 10%;
+    }
+
+    .title{
+      text-align:center;
+      font-size:38px;
+      margin-bottom:50px;
+      color:#38bdf8;
+    }
+
+    /* ABOUT */
+
+    .about-content{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:40px;
+    }
+
+    .about-content img{
+      width:280px;
+      border-radius:20px;
+    }
+
+    .about-text{
+      max-width:600px;
+    }
+
+    .about-text h3{
+      font-size:30px;
+      margin-bottom:15px;
+    }
+
+    .about-text p{
+      color:#cbd5e1;
+      line-height:1.8;
+      margin-bottom:15px;
+    }
+
+    /* PROJECT */
+
+    .project-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .project-card{
+      background:#1e293b;
+      padding:25px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 20px rgba(56,189,248,0.3);
+    }
+
+    .project-card i{
+      font-size:35px;
+      color:#38bdf8;
+      margin-bottom:15px;
+    }
+
+    .project-card h3{
+      margin-bottom:10px;
+    }
+
+    .project-card p{
+      color:#cbd5e1;
+      line-height:1.7;
+    }
+
+    /* CONTACT */
+
+    .contact-container{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:25px;
+    }
+
+    .contact-card{
+      background:#1e293b;
+      padding:25px;
+      width:250px;
+      text-align:center;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .contact-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 20px rgba(56,189,248,0.3);
+    }
+
+    .contact-card i{
+      font-size:40px;
+      color:#38bdf8;
+      margin-bottom:15px;
+    }
+
+    .contact-card a{
+      color:white;
+      text-decoration:none;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#020617;
+      color:#94a3b8;
+      margin-top:50px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      .home{
+        flex-direction:column-reverse;
+        text-align:center;
+      }
+
+      .home-text h1{
+        font-size:40px;
+      }
+
+      .home-text h3{
+        font-size:22px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <h2>Portfolio.</h2>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HOME -->
+
+  <section class="home" id="home">
+
+    <div class="home-text">
+
+      <h1>Hi, I'm <span>Reifansa</span></h1>
+
+      <h3>Web Developer & Designer</h3>
+
+      <p>
+        Saya seorang pelajar yang memiliki minat
+        dalam bidang web design, coding HTML CSS,
+        dan UI design modern aesthetic.
+      </p>
+
+      <a href="#about" class="btn">About Me</a>
+
+    </div>
+
+    <div class="home-img">
+
+      <!-- FOTO -->
+      <img src="flower.png" alt="profile">
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <h2 class="title">About Me</h2>
+
+    <div class="about-content">
+
+      <img src="butterfly.jpg" alt="about">
+
+      <div class="about-text">
+
+        <h3>Hello Everyone 👋</h3>
+
+        <p>
+          Nama saya Reifansa Adzani Ariyastanta.
+          Saya suka membuat website modern,
+          clean, dan responsive menggunakan
+          HTML dan CSS.
+        </p>
+
+        <p>
+          Saya juga tertarik pada dunia desain,
+          editing, dan teknologi digital.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECT -->
+
+  <section id="project">
+
+    <h2 class="title">My Project</h2>
+
+    <div class="project-container">
+
+      <div class="project-card">
+
+        <i class="fa-solid fa-laptop-code"></i>
+
+        <h3>Portfolio Website</h3>
+
+        <p>
+          Membuat website portfolio aesthetic
+          menggunakan HTML dan CSS.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <i class="fa-solid fa-palette"></i>
+
+        <h3>UI Design</h3>
+
+        <p>
+          Mendesain tampilan website modern
+          dengan konsep minimalis.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <i class="fa-solid fa-code"></i>
+
+        <h3>Landing Page</h3>
+
+        <p>
+          Membuat landing page responsive
+          dan menarik untuk berbagai kebutuhan.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2 class="title">Contact Me</h2>
+
+    <div class="contact-container">
+
+      <!-- INSTAGRAM -->
+
+      <div class="contact-card">
+
+        <i class="fa-brands fa-instagram"></i>
+
+        <h3>Instagram</h3>
+
+        <a href="https://instagram.com/gak.tau_yaa" target="_blank">
+          @gak.tau_yaa
+        </a>
+
+      </div>
+
+      <!-- WHATSAPP -->
+
+      <div class="contact-card">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        <h3>WhatsApp</h3>
+
+        <a href="https://wa.me/62895*********" target="_blank">
+          0895*********
+        </a>
+
+      </div>
+
+      <!-- EMAIL -->
+
+      <div class="contact-card">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <h3>Email</h3>
+
+        <a href="mailto:ariyastantareifansaadzani@gmail.com">
+          reifansadzani@gmail.com
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>© 2026 Reifansa Portfolio | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
